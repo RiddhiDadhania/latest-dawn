@@ -1,0 +1,44 @@
+<style>
+  .designer {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+  }
+  .left-deigner{
+    width:20%;
+  }
+  .right-deigner{
+    width:65%;
+  }
+</style>
+
+{% for designer in shop.metaobjects.designer.values %}
+<div class="designer page-width">
+      <div class="left-deigner">
+           <img src="{{ designer.photo | image_url }}" alt="Designer">
+        </div>
+<div class="right-deigner">            
+    <h2>{{ designer.name }}</h2>
+    <p>{{ designer.description }}</p>
+    <a href="{{ designer.website }}">Read More</a>
+  </div>
+</div>
+
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Designer", 
+    "settings": [],
+    "presets": [
+      {
+        "name": "Designer"  
+  }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

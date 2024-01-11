@@ -1,0 +1,121 @@
+<div class="work page-width">
+  <h2 class="work_title">{{section.settings.textbox1}}</h2>
+  <p class="work_desc">{{ section.settings.textbox2 }}</p>
+   <div class="ser_row">
+		{% for block in section.blocks %}
+    		<div class="ser_column">
+      			<div class="main-body">
+					<img src="{{block.settings.img | img_url: 'master' }}">
+     				<h3 class="heading">{{ block.settings.heading_text }}</h3>
+  					<p>{{ block.settings.sub_heading }}</p>
+    			</div>
+			</div>
+		{% endfor %}
+</div>
+</div>
+
+<style>
+.work{
+  padding:50px 0;
+}
+ .work_title {
+    text-align: center;
+    font-size: 50px;
+    color: #000; 
+}
+  .work_desc{
+    text-align: center;
+    width: 72%;
+    margin:auto;
+  }
+  .ser_row {
+    display: grid;
+    grid-column-gap: 0;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto auto;
+    padding-top: 60px;
+}
+  .main-body img{
+  width: 100px;
+  }
+  .ser_column {
+    text-align: center;
+}
+ @media screen and (max-width: 768px) {
+   .ser_row{
+      display: block;
+   }
+   .ser_row p{
+    margin: 0 auto;
+    width: 50%;
+   }
+   .main-body{
+   margin-bottom: 40px;
+   }
+  }  
+  @media screen and (max-width: 360px) {
+   .ser_row p{
+    margin: 0 auto;
+    width: 100%;
+   }
+  }  
+  
+</style>
+{% schema %}
+  {
+    "name": "How-Its-Works",
+	"class": "Express",
+    "settings": [
+{
+       "type" : "text",
+       "id" : "textbox1",
+       "label" : "Enter Your Text Here",
+       "default" : " this is text block "
+},
+{
+       "type" : "text",
+       "id" : "textbox2",
+       "label" : "Enter Your Subtext Here",
+       "default" : " this is text block "
+}      
+
+],
+	"blocks": [
+     {
+       "name": "services",
+       "type": "services",
+       "settings": [
+		  {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+
+          {
+              "type":"text",
+              "id":"heading_text",
+              "label":"heading"
+          },
+          {
+              "type":"text",
+              "id":"sub_heading",
+              "label":"content"
+          }
+       ]
+     }
+   ],
+  
+"presets" : [
+    {
+      "category":"How-Its-Works",
+      "name":"How-Its-Works"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

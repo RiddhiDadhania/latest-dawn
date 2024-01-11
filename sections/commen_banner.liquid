@@ -1,0 +1,87 @@
+<div
+  class="commen_banner"
+  style="{%- if section.settings.image != blank -%}background-image:url('{{ section.settings.image | img_url:'master' }}');{% endif %}"
+>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h1 class="banner_title">{{ page.title }}</h1>
+        <p>
+          <span class="sp1"><a class="removelink" href="/">HOME</a></span>
+          <span class="sp2">{{ page.title }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+ {
+   "name": "commen_banner",
+   "settings": [
+		{
+         "type": "image_picker",
+         "id": "image",
+         "label": "Background Image"
+       }
+	],
+"presets" : [
+   {
+     "category":"commen_banner",
+     "name":"commen_banner"
+   }
+ ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+  .commen_banner {
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+     padding: 105px 0;
+   }
+     .commen_banner .container {
+     max-width: 1140px;
+     margin: 0 auto;
+   }
+   .commen_banner .row {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-right: 0;
+     margin-left: 0;
+   }
+   .commen_banner h1.banner_title {
+     color: #000000;
+     font-size: 40px;
+     letter-spacing: 3px;
+     margin: 0;
+     text-transform: uppercase;
+     line-height: 1.5;
+     font-weight: 100;
+   }
+   .commen_banner span.sp1 {
+     color: #000;
+     text-transform: uppercase;
+     font-size: 13px;
+     letter-spacing: 1px;
+     line-height: 1.8;
+     font-weight: 400;
+     margin-right: 8px;
+   }
+   .commen_banner span.sp2 {
+     color: rgba(0, 0, 0, 0.7);
+     text-transform: uppercase;
+     font-size: 13px;
+     letter-spacing: 1px;
+     line-height: 1.8;
+     font-weight: 400;
+   }
+   .commen_banner a.removelink{
+     text-decoration: none;
+     color: #000;
+   }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

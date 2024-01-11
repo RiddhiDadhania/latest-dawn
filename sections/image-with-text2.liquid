@@ -1,0 +1,61 @@
+<div class="img-wrapper">
+  <img src="{{ section.settings.image | img_url: 'master' }}">
+  <h2>{{ section.settings.title }}</h2>
+</div>
+
+{%- style -%}
+  .img-wrapper{
+   display: flex;
+    {% if section.settings.layout =='image_first' %}
+     flex-direction: row;
+   {% endif %}
+    {% if section.settings.layout =='text_first' %}
+    flex-direction: row-reverse;
+   {% endif %}
+   }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "image-widh-text2",
+  "settings": [
+                   {
+                  	"type": "image_picker",
+          			"label": "your image",
+              		"id": "image"
+              		},
+                    {
+                      "type": "text",
+                       "label": "Title",
+                       "id":"title"
+                   },
+                    {
+                    "type": "select",
+                    "id": "layout",
+                              "options": [
+                                {
+                                  "value": "image_first",
+                                  "label": "left"
+                                },
+                                {
+                                  "value": "text_first",
+                                  "label": "right"
+                                }
+                              ],
+                              "default": "image_first",
+                              "label": "image_first",
+                              "info": "left"
+                            }
+  ],
+  "presets": [{
+    "name": "image-with-text2",
+    "category": "Window"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,29 @@
+h2{
+   font-family: "Poppins-Light" !important;
+} 
+ 
+/* image swatches style */
+label.color-label
+{
+height:40px;
+width:40px;
+border-radius: 50% !important;
+background-position: center;
+background-size: cover; 
+}
+ a.abz
+{
+    color: #fff !important;
+    text-decoration: none !important;
+} 
+
+/* header social icon style */
+.headersocial {
+    padding-left: 20px;
+}
+
+@media (max-width: 1024px){
+.resposive-icons {
+    display: none!important;
+}
+  }

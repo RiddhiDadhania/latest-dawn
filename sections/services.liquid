@@ -1,0 +1,173 @@
+<div class="service page-width">
+  <h2 class="service_title wow slideInUp"  data-wow-delay="1.0s" data-wow-duration="5.0s">{{section.settings.textbox1}}</h2>
+   <div class="ser_row_two">
+		{% for block in section.blocks %}
+    		<div class="ser_column_two">
+      			<div class="main-body_two">
+					<img src="{{block.settings.img | img_url: 'master' }}">
+                  <div class="ser_desc">
+     				<h3 class="xyz">{{ block.settings.heading_text }}</h3>
+  					<p class="xyz">{{ block.settings.sub_heading }}</p>
+                  </div>
+    			</div>
+			</div>
+		{% endfor %}
+     
+</div>
+   <button class="view-btn">
+    <a class="abz" href="{{ section.settings.view-btn-link }}">{{ section.settings.view-btn }}</a>
+    </button>
+</div>
+
+<style>
+  .view-btn {
+    background: #d00a0a;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 18px;
+    text-decoration: none;
+    border:none;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 35px;
+  } 
+ a.abz{
+    color: #fff !important;
+    text-decoration: none !important;
+  } 
+.service{
+  padding:50px 0;
+}
+ .service_title {
+    text-align: center;
+    font-size: 40px;
+    color: #000; 
+}
+  .xyz {
+    margin:0 !important;
+  }
+  h3.xyz {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+  .ser_row_two {
+  /*  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding-top: 20px; */
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding-top: 20px;
+}
+  .ser_column_two {
+    background: #fbf1f0;
+    border-radius: 17px;
+    grid-column: span 2;
+}
+  .main-body_two {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    padding: 35px 20px;
+}
+  .main-body_two img{
+    margin-right: 13px;
+    width: 20%;
+ }
+
+  .ser_column_two:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-end: 4;
+}
+    
+ @media screen and (max-width: 1024px){
+   .ser_row_two {
+    grid-template-columns: auto auto;
+}
+ }  
+ 
+ @media screen and (max-width: 768px) {
+   .ser_row_two{
+     display: block;
+     width: 70%;
+    margin: auto;
+   }
+   .ser_desc{width:70%}
+   .main-body_two{
+   margin-bottom: 40px;
+    padding: 35px 25px;
+   }
+  } 
+   @media screen and (max-width: 600px){
+     .main-body_two{
+    display: block;
+    text-align: center;
+     }
+     .ser_desc{width:auto}
+     .main-body_two{padding: 30px 5px}
+   }
+    
+  
+</style>
+{% schema %}
+  {
+    "name": "Services",
+    "settings": [
+{
+       "type" : "text",
+       "id" : "textbox1",
+       "label" : "Enter Your Text Here",
+       "default" : " this is text block "
+},
+{
+"id": "view-btn-link",
+"type": "url",
+"label": "Button URL"
+},
+{
+"id": "view-btn",
+"type": "text",
+"label": "Button name"
+}
+],
+	"blocks": [
+     {
+       "name": "services",
+       "type": "services",
+       "settings": [
+		  {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Image"
+          },
+
+          {
+              "type":"text",
+              "id":"heading_text",
+              "label":"heading"
+          },
+          {
+              "type":"text",
+              "id":"sub_heading",
+              "label":"content"
+          }
+       ]
+     }
+   ],
+  
+"presets" : [
+    {
+      "category":"Services",
+      "name":"Services"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
