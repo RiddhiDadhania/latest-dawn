@@ -118,18 +118,8 @@
                     section_id: section.id
 
                   %}
-                 {% if option.name == 'Color' %}
-                              <label class="color-label" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background-image: url({{product.variants[forloop.index0].metafields.custom.img_url}});">
-
-                              </label>
-                            {% else %}
-                              <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-                                {{ value }}
-                              </label>
-                           {% endif %}
                 </li>
-              
-            
+        
                            
               {%- endfor -%}
             </ul>
