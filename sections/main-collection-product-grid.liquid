@@ -118,9 +118,7 @@
                     section_id: section.id
 
                   %}
-                </li>
-              
-             {% if option.name == 'Color' %}
+                 {% if option.name == 'Color' %}
                               <label class="color-label" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" style="background-image: url({{product.variants[forloop.index0].metafields.custom.img_url}});">
 
                               </label>
@@ -129,6 +127,9 @@
                                 {{ value }}
                               </label>
                            {% endif %}
+                </li>
+              
+            
                            
               {%- endfor -%}
             </ul>
