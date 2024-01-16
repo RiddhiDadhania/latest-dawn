@@ -207,14 +207,14 @@
               {% for color_option in card_product.options_by_name[key].values %}
               {% for variant in card_product.variants  %}
               {% if variant.options contains color_option %}
-              {% if variant.image %}
+              {% if variant.img_url %}
               {% assign background_style = color_option %}
               {% endif %}
               {% if variant.metafields.color.values %}
               {% assign background_style = variant.metafields.color.values %}
               {% endif %}
-              {% if variant.metafields.image.values %}
-              {% assign background_style = "url(" | append: variant.metafields.image.swatch | append: ")" %}
+              {% if variant.metafields.img_url.values %}
+              {% assign background_style = "url(" | append: variant.metafields.img_url.swatch | append: ")" %}
               {% endif %}
               {% endif %}
               {% endfor %}
