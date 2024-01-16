@@ -214,7 +214,7 @@
               {% assign background_style = variant.metafields.color.values %}
               {% endif %}
               {% if variant.metafields.img_url.values %}
-              {% assign background_style = "url(" | append: variant.metafields.img_url.swatch | append: ")" %}
+              {% assign background_style = "url(" | append: variant.metafields.img_url.values | append: ")" %}
               {% endif %}
               {% endif %}
               {% endfor %}
