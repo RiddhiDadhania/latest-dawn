@@ -11,50 +11,8 @@
     "custom_liquid_Et63R8": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{{metaobject.url}}\n\n{% for designer in shop.metaobjects.designer.values %}\n\n<div class=\"designer page-width\">\n      <div class=\"left-deigner\">\n           <img src=\"{{ designer.photo | image_url }}\" alt=\"Designer\">\n        <\/div>\n <div class=\"right-deigner\">            \n   <h2>{{ designer.name }}<\/h2>\n    <p>{{ designer.description }}<\/p>\n    <a href=\"{{metaobjects.url}}\">Read More<\/a>\n  <\/div>\n<\/div>\n\n{% endfor %}",
+        "custom_liquid": "{{metaobject.url}}\n\n{% for designer in shop.metaobjects.designer.values %}\n\n<div class=\"designer page-width\">\n      <div class=\"left-deigner\">\n           <img src=\"{{ designer.photo | image_url }}\" alt=\"Designer\">\n        <\/div>\n <div class=\"right-deigner\">            \n   <h2>{{ designer.name }}<\/h2>\n    <p>{{ designer.description }}<\/p>\n    <a href=\"{{designer.website}}\">Read More<\/a>\n  <\/div>\n<\/div>\n\n{% endfor %}",
         "color_scheme": "background-1",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "rich_text_XMjpa6": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_RBTUG3": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "text_MgbggB": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "button_trGknr": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "shopify:\/\/metaobjects\/designer\/desiner-1",
-            "button_style_secondary": false,
-            "button_label_2": "two",
-            "button_link_2": "shopify:\/\/metaobjects\/designer\/designer-2",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_RBTUG3",
-        "text_MgbggB",
-        "button_trGknr"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -62,7 +20,6 @@
   },
   "order": [
     "main",
-    "custom_liquid_Et63R8",
-    "rich_text_XMjpa6"
+    "custom_liquid_Et63R8"
   ]
 }
