@@ -14,17 +14,17 @@
  
 {% for designer in shop.metaobjects.designer.values %}
 
-<div class="designer page-width">
+<a href="{{ designer.website }}"><div class="designer page-width">
       <div class="left-deigner">
            <img src="{{ designer.photo | image_url }}" alt="Designer">
         </div>
  <div class="right-deigner">            
    <h2>{{ designer.name }}</h2>
     <p>{{ designer.description }}</p>
-    <a href="{{ designer.website }}">Read More</a>
+    Read More
   </div>
 </div>
-
+</a>
 {% endfor %}
 
 {% schema %}
