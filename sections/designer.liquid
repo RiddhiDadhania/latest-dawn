@@ -14,7 +14,11 @@
  <script>console.log({{ shop.metaobjects.designer.values | json }});</script>
  
 {% for designer in shop.metaobjects.designer.values %}
-<a href="{{ designer.website }}"><div class="designer page-width">
+  
+  <script>console.log({{ writer | json }});</script>
+<script>console.log({{ writer.system.handle | json }});</script>
+
+<a href="/pages/designer/{{ writer.system.handle }}"><div class="designer page-width">
       <div class="left-deigner">
            <img src="{{ designer.photo | image_url }}" alt="Designer">
         </div>
