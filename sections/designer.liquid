@@ -18,7 +18,7 @@
   <script>console.log({{ writer | json }});</script>
 <script>console.log({{ writer.system.handle | json }});</script>
 
-<a href="/pages/designer/{{ writer.system.handle }}"><div class="designer page-width">
+<a href="{{ writer.system.handle }}"><div class="designer page-width">
       <div class="left-deigner">
            <img src="{{ designer.photo | image_url }}" alt="Designer">
         </div>
