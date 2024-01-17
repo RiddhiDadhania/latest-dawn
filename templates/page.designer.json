@@ -11,7 +11,7 @@
     "custom_liquid_Et63R8": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% for designer in shop.metaobjects.designer.values %}\n\n<div class=\"designer page-width\">\n      <div class=\"left-deigner\">\n           <img src=\"{{ designer.photo | image_url }}\" alt=\"Designer\">\n        <\/div>\n <div class=\"right-deigner\">            \n   <h2>{{ designer.name }}<\/h2>\n    <p>{{ designer.description }}<\/p>\n    <a href=\"{{ designer.website }}\">Read More<\/a>\n  <\/div>\n<\/div>\n\n{% endfor %}",
+        "custom_liquid": "{% for designer in shop.metaobjects.designer.values %}\n\n<div class=\"designer page-width\">\n      <div class=\"left-deigner\">\n           <img src=\"{{ designer.photo | image_url }}\" alt=\"Designer\">\n        <\/div>\n <div class=\"right-deigner\">            \n   <h2>{{ designer.name }}<\/h2>\n    <p>{{ designer.description }}<\/p>\n    <a href=\"{{ designer.url}}\">Read More<\/a>\n  <\/div>\n<\/div>\n\n{% endfor %}",
         "color_scheme": "background-1",
         "padding_top": 40,
         "padding_bottom": 52
