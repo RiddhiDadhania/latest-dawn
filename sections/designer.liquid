@@ -11,7 +11,7 @@
     width:65%;
   }
 </style>
-  <a href="{{ shop.metaobjects.designer.handle }}">test
+ 
 {% for designer in shop.metaobjects.designer.values %}
 
 <div class="designer page-width">
@@ -21,12 +21,12 @@
  <div class="right-deigner">            
    <h2>{{ designer.name }}</h2>
     <p>{{ designer.description }}</p>
-    <a href="{{ designer.website }}">Read More</a>
+    <a href="{{ designer.url }}">Read More</a>
   </div>
 </div>
 
 {% endfor %}
-</a>
+
 {% schema %}
   {
     "name": "Designer", 
