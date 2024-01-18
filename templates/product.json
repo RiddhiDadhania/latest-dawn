@@ -15,6 +15,11 @@
           "settings": {
           }
         },
+        "rating_pLUfTG": {
+          "type": "rating",
+          "settings": {
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -94,16 +99,12 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "helpful_product_reviews_app_hc_product_summary_FE8kTF": {
-          "type": "shopify:\/\/apps\/helpful-product-reviews-app\/blocks\/hc-product-summary\/9bf824de-c268-4eee-942e-41bfd62146a3",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "vendor",
         "helpful_product_reviews_app_hc_product_rating_FXzcMg",
+        "rating_pLUfTG",
         "title",
         "price",
         "variant_picker",
@@ -115,8 +116,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "helpful_product_reviews_app_hc_product_summary_FE8kTF"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
