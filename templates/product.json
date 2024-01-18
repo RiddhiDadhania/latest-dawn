@@ -10,16 +10,6 @@
             "text_style": "uppercase"
           }
         },
-        "helpful_product_reviews_app_hc_product_rating_FXzcMg": {
-          "type": "shopify:\/\/apps\/helpful-product-reviews-app\/blocks\/hc-product-rating\/9bf824de-c268-4eee-942e-41bfd62146a3",
-          "settings": {
-          }
-        },
-        "rating_pLUfTG": {
-          "type": "rating",
-          "settings": {
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -103,8 +93,6 @@
       },
       "block_order": [
         "vendor",
-        "helpful_product_reviews_app_hc_product_rating_FXzcMg",
-        "rating_pLUfTG",
         "title",
         "price",
         "variant_picker",
