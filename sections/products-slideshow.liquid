@@ -8,7 +8,7 @@
     </center>
     <div class="rslides_container">
       <ul class="rslides" id="slider1">
-        {% for product in collections.products %}
+        {% for product in collections[section.settings.feature_collection].products %}
           <li class="slideshow-item">
             <a href="{{ product.url }}"
               ><img
