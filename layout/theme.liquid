@@ -7,8 +7,12 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" type="text/css" rel="stylesheet">
-    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      type="text/css"
+      rel="stylesheet"
+    >
+
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
     {%- endif -%}
@@ -31,7 +35,7 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-   
+
     {{ content_for_header }}
 
     {%- liquid
@@ -220,9 +224,6 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom.css' | asset_url | stylesheet_tag }}
-    {{ 'slick.css' | asset_url | stylesheet_tag}}
-    {{ 'slick-theme.css' | asset_url | stylesheet_tag}}
-  
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
@@ -232,25 +233,31 @@
     {%- endunless -%}
 
     {%- if settings.predictive_search_enabled -%}
-      <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
     {%- endif -%}
 
-    <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-    if (Shopify.designMode) {
-      document.documentElement.classList.add('shopify-design-mode');
-    }
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
     </script>
-  <style>
-   @font-face {
-    font-family: Poppins-Light;
-    src: url("{{ 'Poppins-Light.ttf' | file_url }}") ;
-  }
-  </style>
+    <style>
+       @font-face {
+        font-family: Poppins-Light;
+        src: url("{{ 'Poppins-Light.ttf' | file_url }}") ;
+      }
+    </style>
   </head>
 
   <body class="gradient">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ "accessibility.skip_to_text" | t }}
+      {{ 'accessibility.skip_to_text' | t }}
     </a>
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -260,19 +267,17 @@
     {% section 'announcement-bar' %}
     {% section 'header' %}
 
-<!--   condition to breadcrums for specific template   -->
-   {% unless page.template_suffix  == "blog" %}
-          {% section 'breadcrums' %}
+    <!-- condition to breadcrums for specific template -->
+    {% unless page.template_suffix == 'blog' %}
+      {% section 'breadcrums' %}
     {% endunless %}
 
-
-<!--   condition to breadcrums for specific page   -->
-    {% comment %}  
-    {% unless page.handle == "blogs" %}
-          {% section 'breadcrums' %}
-    {% endunless %}
+    <!-- condition to breadcrums for specific page -->
+    {% comment %}
+      {% unless page.handle == "blogs" %}
+            {% section 'breadcrums' %}
+      {% endunless %}
     {% endcomment %}
-    
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
@@ -316,13 +321,11 @@
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-   
     {%- endif -%}
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-         <script>
-              new WOW().init();
-              </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
