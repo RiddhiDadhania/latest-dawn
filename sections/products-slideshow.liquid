@@ -13,7 +13,6 @@
             <a href="{{ product.url }}"
               ><img
                 src="{{ product.featured_image | img_url: 'medium' | format: 'jpg' }}"
-                alt="{{ block.settings.slide_heading }}"
             ></a>
             <h3>{{ product.title }}</h3>
             <h4>{{ product.price | money | remove: '.00' }}</h4>
