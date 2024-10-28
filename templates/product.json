@@ -43,7 +43,7 @@
         "1ae1240e-2707-489f-8d2a-cd633ec09f2b": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<div class=\"product__name-field\">\n                      <label for=\"name_field\">Name:</label>\n                      <input type=\"text\" id=\"name_field\" name=\"properties[Name]\" placeholder=\"Enter your name\">\n                    </div>"
+            "custom_liquid": "<div class=\"product__name-field\">\n                      <label for=\"name_field\">Name:</label>\n                      <input type=\"text\" id=\"name_field\" name=\"properties[Name]\" placeholder=\"Enter your name\">\n                    </div>\n\n\n<label for=\"message\" class=\"form__label\">Message:</label>\n<div class=\"field\">\n  <textarea id=\"message\" class=\"text-area field__input\" placeholder=\"Message\" name=\"properties[Message]\" form=\"product-form-{{ section.id }}\"  invalid=\"true\"></textarea>\n</div>"
           }
         },
         "buy_buttons": {
